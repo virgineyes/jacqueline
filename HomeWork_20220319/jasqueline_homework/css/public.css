@@ -1,0 +1,84 @@
+body {
+    background: #333;
+    color:white;
+    font-family: "Gilroy Bold";
+    background-image: url(../images/desert.jpg);
+    background-size: 100%;
+}
+h2 {
+    text-align: center;
+    margin-bottom: 60px;
+    color: red;
+}
+.fashionistaworld_btn {
+    display: inline-block;
+    width:240px;
+    height:280px;
+    color: #333;
+    background-repeat:no-repeat;
+    margin: 5px;
+    padding-top: 15.5em;
+    font-family: "Gilroy Bold";
+}
+#desert_buttons, #fashionistaworld{
+    margin:0 auto;
+    position:relative;
+}
+div{
+    margin:5% auto;
+    text-align: center;
+}
+button {
+    border-radius:0;
+	border-width:0;
+    background-color: #f00;
+    color:#fff;
+}
+.btn_luxurygoods {
+	background-image:url(../images/fashionistaworld_luxurygoods.jpg);
+    transition: all 1s;
+}
+.btn_people {
+	background-image:url(../images/fashionistaworld_people.jpg);
+    transition: all 1s;
+   
+}
+.btn_socialmedia {
+	background-image:url(../images/fashionistaworld_socialmedia.png);
+    transition: all 1s; 
+}
+.btn_luxurygoods:hover {
+    border: 10px #00985B solid;
+}
+.btn_people:hover {
+    border: 10px #FAA91D solid;
+}
+.btn_socialmedia:hover {
+    border: 10px #3364AE solid;
+}
+
+
+.btn_result {
+    border-radius: 15px;
+    border-width: 0;
+    color: #fff;
+    background-color: #C42126;
+    font-family: "Gilroy Bold";
+    padding: 20px 40px;
+}
+.btn_result:hover {
+    background-color: #A0121D;
+}
+#flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: -20px;
+    margin-bottom: -20px;
+}
+.description_result {
+    font-family: "Gilroy Medium";
+    margin-top: 40px;
+    color: #fff;
+}

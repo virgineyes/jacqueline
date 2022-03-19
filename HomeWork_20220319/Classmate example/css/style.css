@@ -1,0 +1,112 @@
+@font-face {
+    font-family: "Gilroy Bold";
+    src: url("fonts/gilroy/gilroy_bold.ttf"); 
+}
+@font-face {
+    font-family: "Gilroy Medium";
+    src: url("fonts/gilroy/gilroy_medium.ttf"); 
+}
+@font-face {
+    font-family: "Gilroy Regular";
+    src: url("fonts/gilroy/gilroy_regular.ttf"); 
+}
+body {
+    background: #333;
+    color:white;
+    font-family: "Gilroy Bold";
+    background-image: url(../images/squidgame_bg.svg);
+    background-size: 50%;
+}
+main {
+    background-color: rgb(255, 255, 255, 15%);
+    margin: 60px auto 0 auto;
+    padding: 4em 2em;
+    width: 60%;
+    border-radius: 20px;
+}
+h2 {
+    text-align: center;
+    margin-bottom: 60px;
+    color: #fff;
+}
+.vs_result {
+    display: inline;
+    margin-top: 2em;
+}
+#flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: -20px;
+    margin-bottom: -20px;
+}
+.description_result {
+    font-family: "Gilroy Medium";
+    margin-top: 40px;
+    color: #fff;
+}
+#squidgame_buttons, #squidgame_result{
+    margin:0 auto;
+    position:relative;
+}
+div{
+    margin:5% auto;
+    text-align: center;
+}
+img {
+    display:inline-block;
+    width:240px;
+    height:240px;
+}
+button {
+    border-radius: 20px;
+    border-width: 0;
+    color: #fff;
+    font-family: "Gilroy Medium";
+}
+.btn_result {
+    border-radius: 15px;
+    border-width: 0;
+    color: #fff;
+    background-color: #C42126;
+    font-family: "Gilroy Bold";
+    padding: 20px 40px;
+}
+.btn_result:hover {
+    background-color: #A0121D;
+}
+.squidgame_btn{
+    display: inline-block;
+    width:240px;
+    height:280px;
+    color: #333;
+    background-repeat:no-repeat;
+    margin: 5px;
+    padding-top: 15.5em;
+    font-family: "Gilroy Bold";
+}
+.btn_blackmask {
+    background-image:url(../images/squidgame_blackmask.svg);
+    transition: all .1s;
+    background-color: #fff;
+}
+.btn_pinksoldier {
+    background-image:url(../images/squidgame_pinksoldier.svg);
+    transition: all .1s;
+    background-color: #fff;
+}
+.btn_456 {
+    background-image:url(../images/squidgame_456.svg);
+    transition: all .1s;
+    background-color: #fff;
+}
+.btn_blackmask:hover {
+    border: 10px #00985B solid;
+}
+.btn_pinksoldier:hover {
+    border: 10px #FAA91D solid;
+}
+.btn_456:hover {
+    border: 10px #3364AE solid;
+}

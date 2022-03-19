@@ -5,10 +5,25 @@ body {
     background-image: url(../images/desert.jpg);
     background-size: 100%;
 }
+div{
+    margin:5% auto;
+    text-align: center;
+}
 h2 {
     text-align: center;
     margin-bottom: 60px;
     color: red;
+}
+
+button {
+    border-radius:0;
+	border-width:0;
+    background-color: #f00;
+    color:#fff;
+}
+#desert_buttons, #fashionistaworld{
+    margin:0 auto;
+    position:relative;
 }
 .fashionistaworld_btn {
     display: inline-block;
@@ -20,20 +35,7 @@ h2 {
     padding-top: 15.5em;
     font-family: "Gilroy Bold";
 }
-#desert_buttons, #fashionistaworld{
-    margin:0 auto;
-    position:relative;
-}
-div{
-    margin:5% auto;
-    text-align: center;
-}
-button {
-    border-radius:0;
-	border-width:0;
-    background-color: #f00;
-    color:#fff;
-}
+
 .btn_luxurygoods {
 	background-image:url(../images/fashionistaworld_luxurygoods.jpg);
     transition: all 1s;
@@ -41,7 +43,6 @@ button {
 .btn_people {
 	background-image:url(../images/fashionistaworld_people.jpg);
     transition: all 1s;
-   
 }
 .btn_socialmedia {
 	background-image:url(../images/fashionistaworld_socialmedia.png);
@@ -69,6 +70,7 @@ button {
 .btn_result:hover {
     background-color: #A0121D;
 }
+
 #flex {
     display: flex;
     justify-content: center;

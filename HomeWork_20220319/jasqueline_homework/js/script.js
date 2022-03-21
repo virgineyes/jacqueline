@@ -9,19 +9,10 @@ function makeComputerChoice(){
 function makeUserChoice(choice){
 	makeComputerChoice();
 	userchoice = choice; 
-	let userImageType = ".jpg"
-	let computerImageType = ".jpg"
-	if (options[userchoice] == "socialmedia") {
-		userImageType = ".png"
-	}
-	if (options[computerchoice] == "socialmedia") {
-		computerImageType = ".png"
-	}
-	
 	result.innerHTML =
-		"<div id='flex'><img src='images/fashionistaworld_" + options[userchoice] + userImageType + "'>" +
+		"<div id='flex'><img src='images/fashionistaworld_" + options[userchoice] + ".jpg'>" +
 		"<h2 class='vs_result'>VS</h2>" + 
-		"<img src='images/fashionistaworld_" + options[computerchoice] + computerImageType + "'></div>";
+		"<img src='images/fashionistaworld_" + options[computerchoice] + ".jpg'></div>";
 	makeGameResult();
 }
 function makeGameResult(){

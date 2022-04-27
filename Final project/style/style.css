@@ -1,0 +1,69 @@
+html, body{
+	width: 100%;
+	height: 100%;
+}
+ul {
+	list-style: none;
+}
+
+body{
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+}
+
+main {
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+main p{
+	width: 50%;
+}
+
+main, header, footer{
+	flex-shrink: 0;
+}
+
+footer{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+
+nav{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+	margin-right: 20px;
+
+}
+
+a {
+	text-decoration: none;
+	padding: 1em;
+
+}
+ul{
+	list-style: none;
+	display: flex;
+}
+li {
+	background-color: yellow;
+
+} 
+h1 {
+	text-align: center;
+}
+
+.artist_image{
+	margin: 0;
+	padding-right: 60%;
+	padding-left: 59%;
+}
+

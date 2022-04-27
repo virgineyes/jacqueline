@@ -12,29 +12,23 @@ body{
 	flex-direction: column;
 	align-items: stretch;
 }
-
 main {
 	flex-grow: 1;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 }
-
 main p{
-	width: 50%;
+	width: 80%;
 }
-
 main, header, footer{
 	flex-shrink: 0;
 }
-
 footer{
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
 }
-
-
 nav{
 	display: flex;
 	flex-direction: row;
@@ -42,11 +36,9 @@ nav{
 	justify-content: center;
 	margin-right: 20px;
 }
-
 a {
 	text-decoration: none;
 	padding: 1em;
-
 }
 ul{
 	list-style: none;
@@ -56,13 +48,26 @@ li {
 	background-color: yellow;
 
 } 
-h1 {
-	text-align: center;
-}
-
 .artist_image{
 	margin: 0;
 	padding-right: 60%;
 	padding-left: 59%;
 }
-
+h2 {
+	text-align: center;
+}
+h1 {
+	text-align: center;
+}
+.button {
+	background-color: goldenrod; /* Green */
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+}

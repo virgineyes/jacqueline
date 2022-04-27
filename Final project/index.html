@@ -3,10 +3,19 @@
 <head>
 	<title>Home Page</title>
 	<link rel="stylesheet" type="text/css" href="style/style.css">
+	<script>
+		function openTab(title) {
+			var i;
+			var x = document.getElementsByClassName("tab");
+			for (i = 0; i < x.length; i++) {
+				x[i].style.display = "none";  
+			}
+			document.getElementById(title).style.display = "block";  
+		}
+	</script>
 </head>
 <body>
-	<main>
-		<img src="image/art.jpg">
+	<header>
 		<nav>
 			<ul>
 				<li><a href="index.html">Art</a></li>
@@ -15,8 +24,38 @@
 				<li><a href="museum.html">Museum</a></li>
 			</ul>
 		</nav>
-		<h2 class="artist_description">Decision</h2>
-		<p class="artist_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et aliquet nisi. Duis sed consequat elit. Pellentesque vulputate magna sit amet nisl porta tempor. Aliquam pretium neque sit amet urna lobortis feugiat. Etiam id lectus et elit ultrices sodales non ac odio. Nunc lacinia fringilla tellus, sit amet egestas ex feugiat a. Aenean non leo ac urna ultricies hendrerit id sed lacus. Nunc vel augue quis tellus ullamcorper lobortis et ac metus. </p>
+	</header>
+	<main>
+		<img src="image/art.jpg">
+		<br/>
+		<br/>
+		<div>
+			<button class="button" onclick="openTab('Decision')">Decision</button>
+			<button class="button" onclick="openTab('TwoTab')">TwoTab</button>
+			<button class="button" onclick="openTab('ThreeTab')">ThreeTab</button>
+		</div>
+	
+		<div id="Decision" class="tab">
+			<h2>Decision</h2>
+			<center>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et aliquet nisi. Duis sed consequat elit. Pellentesque vulputate magna sit amet nisl porta tempor. Aliquam pretium neque sit amet urna lobortis feugiat. Etiam id lectus et elit ultrices sodales non ac odio. Nunc lacinia fringilla tellus, sit amet egestas ex feugiat a. Aenean non leo ac urna ultricies hendrerit id sed lacus. Nunc vel augue quis tellus ullamcorper lobortis et ac metus. </p>
+			</center>
+		</div>
+
+		<div id="TwoTab" class="tab" style="display:none">
+			<h2>TwoTab</h2>
+			<center>
+				<p>TwoTab Content...</p> 
+			</center>
+
+		  </div>
+		  
+		  <div id="ThreeTab" class="tab" style="display:none">
+			<h2>ThreeTab</h2>
+			<center>
+				<p>ThreeTab Content...</p>
+			</center>
+		  </div>
 	</main>
 	<footer>
 		<p>© Copyright 2022 by Jacqueline Yeh</p>

@@ -46,6 +46,7 @@ function Carousel(el) {
         carousel.showPosition(direction,false)
     }
        
+    
     carousel.showPosition = function(direction,placed) {
      clearTimeout(carousel.changeTimer);
      carousel.changeTimer = false;

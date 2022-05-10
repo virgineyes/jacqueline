@@ -331,6 +331,28 @@ $(function(){
 		$("article").eq(i).show(300).siblings().hide(300)
 		$(this).addClass("active").siblings().removeClass("active");
 	})
+    $(".thumb-images img").on("click",function(){
+        chosen = $(this).index();
+        showImage();
+    })
+    $(".thumb-images .arrow.right").on("click",function(){
+        let max = Math.floor($(".thumb-images img").length/3);
+        page<max?page++:page;
+        scrollDiv();
+    })
+    $(".thumb-images .arrow.left").on("click",function(){
+        page>0?page--:page;
+        scrollDiv();
+    })
+    $(".big-image .arrow.right").on("click",function(){
+        let max = $(".thumb-images img").length;
+        chosen<max?chosen++:chosen;
+        showImage();
+    })
+    $(".big-image .arrow.left").on("click",function(){
+        chosen>0?chosen--:chosen;
+        showImage();
+    })
 })
 
 let chosen = 0;
@@ -346,27 +368,5 @@ function showImage(){
     $(".big-image img").attr({src:chose.attr("src")})
     chose.addClass("active").siblings().removeClass("active");
 }
-$(".thumb-images img").on("click",function(){
-    chosen = $(this).index();
-    showImage();
-})
-$(".thumb-images .arrow.right").on("click",function(){
-    let max = Math.floor($(".thumb-images img").length/3);
-    page<max?page++:page;
-    scrollDiv();
-})
-$(".thumb-images .arrow.left").on("click",function(){
-    page>0?page--:page;
-    scrollDiv();
-})
-$(".big-image .arrow.right").on("click",function(){
-    let max = $(".thumb-images img").length;
-    chosen<max?chosen++:chosen;
-    showImage();
-})
-$(".big-image .arrow.left").on("click",function(){
-    chosen>0?chosen--:chosen;
-    showImage();
-})
 
 

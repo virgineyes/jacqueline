@@ -1,0 +1,460 @@
+html, body{
+	width: 100%;
+	height: 100%;
+}
+ul {
+	list-style: none;
+}
+
+body{
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+}
+
+main {
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+main p{
+	width: 80%;
+}
+main, header, footer{
+	flex-shrink: 0;
+}
+footer{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+header {
+	border-top: 0px;
+	border-left: 0px;
+	border-style: solid;
+	border-color: black;
+}
+nav{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: right;
+	margin-right: 20px;
+	font-size: 24px;
+}
+a {
+	text-decoration: none;
+	padding: 2em;
+}
+ul{
+	list-style: none;
+	display: flex;
+}
+li {
+	background-color: #FFD700;
+	border: 1px solid black;
+	margin: 5px;
+	padding: 10px;
+} 
+li:hover
+{
+   background-color: black;
+}
+a:hover {
+  color: white
+}
+.artist_image{
+	margin: 0;
+	padding-right: 60%;
+	padding-left: 59%;
+}
+h2 {
+	text-align: center;
+}
+h1 {
+	text-align: center;
+}
+
+.tab_container {
+	padding: 40px;
+}
+.tab_container h3 {
+	margin-top: 0;
+}
+.tab_ul {
+	margin: 2em 2em -1em 0;
+	padding-left: 40px;
+	display: flex;
+	list-style: none;
+}
+.tab_ul li {
+	padding: 15px 20px;
+	font-size: 1em;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+	margin-right: 10px;
+	background-color: #f8f8f8;
+}
+.tab_ul li:hover,
+.tab_ul li.active {
+	background-color: #87CEEB;
+}
+
+
+#tab_content {
+	height: 300px;
+	overflow: scroll;
+	border: 2px solid #f8f8f8;
+	border-radius: 15px;
+	position: relative;
+	top: 1em;
+	margin-bottom: 4em;
+}
+
+#logo img {
+	position: absolute;
+    top: 25px;
+    left: 7px;
+}
+
+.artCarousel-slide:nth-of-type(1) {
+    background-image: url(../image/art.jpg);
+}
+.artCarousel-slide:nth-of-type(2) {
+	background-image: url(../image/art2.jpg);
+}
+.artCarousel-slide:nth-of-type(3) {
+	background-image: url(../image/art3.jpg);
+}
+.artCarousel-slide {
+	background-size: cover;
+	background-position: center;
+}
+.artCarousel {
+	width: 60%;
+	height: 800px;
+	position: relative;
+	overflow: hidden;
+}
+.artCarousel-deck {
+	width: 60%;
+	height: 800px;
+	position: relative;
+	overflow: hidden;
+}
+.artCarousel-slide {
+	position: absolute;
+	left: 100%;
+	width: 100%;
+	height: 100%;
+}
+.artCarousel-slide.atLeft {
+	left: -100%;
+}
+.artCarousel-slide.atRight {
+	left: 100%;
+}
+.artCarousel-slide.atCenter {
+	left: 0;
+}
+.moving {
+	transition: left .9s;
+}
+.artCarousel-controls {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	text-align: center;
+	user-select: none;
+}
+.artCarousel-control,
+.artCarousel-paginate {
+	width: 2em;
+	height: 2em;
+	text-align: center;
+	line-height: 2em;
+	font-family: helvetica;
+	background-color: rgba(255,255,255,0.5);
+	border-radius: 50%;
+	position: absolute;
+	bottom: 199px;
+	transition: all .5s;
+}
+.artCarousel-control {
+	width: 2em;
+	height: 2em;
+	line-height: 2em;
+	font-size: 2em;
+}
+.artCarousel-control-left {
+	left: -2em;
+}
+.artCarousel:hover .artCarousel-control-left {
+	left: 10px;
+}
+.artCarousel-control-right {
+	right: -2em;
+}
+.artCarousel:hover .artCarousel-control-right {
+	right: 10px;
+}
+.artCarousel-pagination {
+	display: inline-block;
+	position: relative;
+	bottom: -2.25em;
+	transition: all .5s;
+}
+.artCarousel:hover .artCarousel-pagination {
+	bottom: 10px;
+}
+.artCarousel-paginate {
+    position: static;
+    font-size: 1em;
+    border-width: 0;
+    cursor: pointer;
+    outline: 0;
+    display: inline-block;
+    color: rgba(0,0,0,0.2);
+}
+.artCarousel-paginate.active {
+	background-color: rgba(225,225,225,0.7);
+	color: rgba(255,215,0);
+	cursor: pointer;
+}
+.artCarousel-control:hover,
+.artCarousel-paginate:hover {
+	background-color: rgba(225,225,225,1);
+	color: rgba(255,215,0);
+	cursor: pointer;
+}
+.artCarousel[data-controls=pagination] .artCarousel-move-right,
+.artCarousel[data-controls=pagination] .artCarousel-move-left {
+    display: none;
+}
+.artCarousel[data-controls=directional] .artCarousel-pagination {
+	display: none;
+}
+.artCarousel[data-controls=none] .artCarousel-controls {
+	display: none;
+}
+
+.gallery {
+	display: flex;
+	flex-wrap:  wrap;
+}
+.gallery-item {
+	flex:  0 0 33%;
+}
+.gallery-item img {
+	width:  100%;
+	height:  100%;
+	object-fit: cover;
+	object-position: center;
+}
+
+/* lightbox */
+
+.lightbox {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+	opacity: 0;
+}
+.lightbox.active {
+	opacity: 1;
+	pointer-events: initial;
+}
+.lightbox-back {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.8);
+	cursor: pointer;
+}
+.lightbox-content {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	max-height: calc(100% - 6em);
+	max-width: calc(100% - 6em);
+	transform: translate(-50%,-50%);
+}
+.lightbox-content img {
+	max-width: 100%;
+	max-height: 100%;
+}
+.lightbox-content::after {
+	content: '\000D7';
+	position: absolute;
+	top: -2em;
+	right: -2em;
+	width: 2em;
+	height: 2em;
+	line-height: 2em;
+	text-align: center;
+	background-color: #fff;
+	box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+	border-radius: 2em;
+	pointer-events: none;
+}
+
+body {
+	margin-top:  10px;
+} 
+.carousel-slide:nth-of-type(1) {
+    background-image: url(../image/thekiss.jpg);
+}
+.carousel-slide:nth-of-type(2) {
+	background-image: url(../image/thescream.jpg);
+}
+.carousel-slide:nth-of-type(3) {
+	background-image: url(../image/arnolfiniportrait.jpg);
+}
+.carousel-slide:nth-of-type(4) {
+    background-image: url(../image/thestarrynight.jpg);
+}
+.carousel-slide:nth-of-type(5) {
+	background-image: url(../image/girlwithapearlearring.jpg);
+}
+.carousel-slide:nth-of-type(6) {
+	background-image: url(../image/monalisa.jpg);
+}
+.carousel-slide:nth-of-type(7) {
+    background-image: url(../image/cavepaintingfromlascauxcave.jpg);
+}
+.carousel-slide:nth-of-type(8) {
+	background-image: url(../image/yellow.jpg);
+}
+.carousel-slide:nth-of-type(9) {
+	background-image: url(../image/kiss.jpg);
+}
+.carousel-slide:nth-of-type(10) {
+    background-image: url(../image/nikeofsamothrace.jpg);
+}
+.carousel-slide:nth-of-type(11) {
+	background-image: url(../image/reddress.jpg);
+}
+.carousel-slide:nth-of-type(12) {
+	background-image: url(../image/augustusofprimaporta.jpg);
+}
+.carousel-slide {
+	background-size: cover;
+	background-position: center;
+}
+.carousel {
+	width: 60%;
+	height: 850px;
+	position: relative;
+	overflow: hidden;
+}
+.carousel-deck {
+	width: 60%;
+	height: 850px;
+	position: relative;
+	overflow: hidden;
+}
+.carousel-slide {
+	position: absolute;
+	left: 100%;
+	width: 100%;
+	height: 100%;
+}
+.carousel-slide.atLeft {
+	left: -100%;
+}
+.carousel-slide.atRight {
+	left: 100%;
+}
+.carousel-slide.atCenter {
+	left: 0;
+}
+.moving {
+	transition: left .9s;
+}
+.carousel-controls {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	text-align: center;
+	user-select: none;
+}
+.carousel-control,
+.carousel-paginate {
+	width: 2em;
+	height: 2em;
+	text-align: center;
+	line-height: 2em;
+	font-family: helvetica;
+	background-color: rgba(255,255,255,0.5);
+	border-radius: 50%;
+	position: absolute;
+	bottom: 199px;
+	transition: all .5s;
+}
+.carousel-control {
+	width: 2em;
+	height: 2em;
+	line-height: 2em;
+	font-size: 2em;
+}
+.carousel-control-left {
+	left: -2em;
+}
+.carousel:hover .carousel-control-left {
+	left: 10px;
+}
+.carousel-control-right {
+	right: -2em;
+}
+.carousel:hover .carousel-control-right {
+	right: 10px;
+}
+.carousel-pagination {
+	display: inline-block;
+	position: relative;
+	bottom: -2.25em;
+	transition: all .5s;
+}
+.carousel:hover .carousel-pagination {
+	bottom: 10px;
+}
+.carousel-paginate {
+    position: static;
+    font-size: 1em;
+    border-width: 0;
+    cursor: pointer;
+    outline: 0;
+    display: inline-block;
+    color: rgba(0,0,0,0.2);
+}
+.carousel-paginate.active {
+	background-color: rgba(225,225,225,0.7);
+	color: rgba(255,215,0);
+	cursor: pointer;
+}
+.carousel-control:hover,
+.carousel-paginate:hover {
+	background-color: rgba(225,225,225,1);
+	color: rgba(255,215,0);
+	cursor: pointer;
+}
+.carousel[data-controls=pagination] .carousel-move-right,
+.carousel[data-controls=pagination] .carousel-move-left {
+    display: none;
+}
+.carousel[data-controls=directional] .carousel-pagination {
+	display: none;
+}
+.carousel[data-controls=none] .carousel-controls {
+	display: none;
+}
+
